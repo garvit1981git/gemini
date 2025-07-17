@@ -1,0 +1,373 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* animation for loadre // */
+
+
+   .loader-container {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+justify-content:center;
+align-items:center;
+      }
+
+      .line-loader {
+        width: 500px;
+        height: 10px;
+        border-radius: 5px;
+        animation: pulseLine 2s ease-in-out infinite;
+        background-size: 200% 100%;
+        background-repeat: no-repeat;
+      }
+
+      .line-loader:nth-child(1) {
+        background: linear-gradient(90deg, #007bff, #6610f2);
+        animation-delay: 0s;
+      }
+
+      .line-loader:nth-child(2) {
+        background: linear-gradient(90deg, #7d07ec, #adb5bd);
+        animation-delay: 0.15s;
+      }
+
+      .line-loader:nth-child(3) {
+        background: linear-gradient(90deg, #5c034f, #20c997);
+        animation-delay: 0.3s;
+      }
+
+      .line-loader:nth-child(4) {
+        background: linear-gradient(90deg, #4635dc, #14fdfd);
+        animation-delay: 0.45s;
+      }
+
+      @keyframes pulseLine {
+        0%,
+        100% {
+          transform: scaleX(1);
+          opacity: 0.4;
+        }
+        50% {
+          transform: scaleX(1.5);
+          opacity: 1;
+        }
+      }
+
+/* animation for loader */
+#root {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f6fa;
+}
+
+/* Sidebar */
+.sidebar {
+  padding: 20px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: linear-gradient(to bottom, #6a737d, #4b535a);
+  color: white;
+  height: 100%;
+  /* width: 18%; */
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.top {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 40px;
+  width: 100%;
+}
+
+.bottum {
+  display: inline-flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 15px;
+}
+
+.addtext {
+  width: 100%;
+  color: white;
+  /* font-weight: bold; */
+/* display:block; */
+}
+
+.addnew {
+font-size:20px;
+  display: inline-flex;
+justify-content:center;
+align-items:center;
+  padding: 10px;
+  gap: 30px;
+  background-color: #ffe4c4;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+/* height:10%; */
+/* width:100%; */
+}
+.addnew:hover {
+  background-color: #fddbb0;
+}
+
+.recent {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 100%;
+  max-height: 60%;
+  overflow-y: auto;
+
+  /* Smooth scrolling for better UX */
+  scroll-behavior: smooth;
+
+  /* Firefox scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}
+
+/* WebKit (Chrome, Safari, Edge) */
+.recent::-webkit-scrollbar {
+  width: 8px;
+}
+
+.recent::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.recent::-webkit-scrollbar-thumb {
+  background: transparent;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.recent:hover::-webkit-scrollbar-thumb {
+  background: lightgray;
+}
+
+/* Firefox hover scroll color */
+.recent:hover {
+  scrollbar-color: lightgray transparent;
+}
+.recent-entry{
+display:flex;
+align-items:center;
+justify-content:center;
+padding:10px;
+}
+.recent-entry:hover{
+display:flex;
+align-items:center;
+justify-content:center;
+background:lightcyan;
+border-radius:40px;
+color:black;
+padding:10px;
+}
+.main {
+  height: 100%;
+  width: 100%;
+overflow-y:auto;
+}
+
+/* Top Navigation */
+.nav {
+position:sticky;
+top:0px;
+  background-color: rgb(250, 248, 242);
+  display: flex;
+  height: 8.5%;
+  width: 100%;
+  padding: 10px 30px;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05);
+padding:5px;
+}
+.nav p{
+  margin-left:10px;
+}
+
+/* Greeting Section */
+.greet {
+  font-size: 36px;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #333;
+}
+
+/* Cards Section */
+.cards {
+  display: flex;
+  gap: 20px;
+  padding: 10px 0;
+  overflow-x: auto;
+  height: 100%;
+}
+
+.card {
+  border-radius: 10px;
+  background-color: rgb(196, 214, 231);
+  width: 250px;
+  padding: 15px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* Bottom Input Container */
+.bottum-item {
+  display: flex;
+  gap: 10px;
+}
+
+.main-bottum {
+margin-top:900px;
+gap:1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  height: 20%;
+margin:auto;
+position:sticky;
+bottom:-3.5%;
+/* left:13%; */
+}
+
+/* Input Box */
+.input {
+
+  /* margin-top: 20px; */
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid #2ecc71;
+  border-radius: 40px;
+  height: 60%;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: white;
+}
+
+.input input {
+  flex: 1;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  height: 110%;
+  width: 80%;
+  padding: 10px;
+  font-size: 16px;
+}
+
+/* Main Content Area */
+.main-content {
+  margin: 50px auto 0;
+  padding: 50px;
+  width: 80%;
+  height: 65%;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+/* Answer Container */
+.answer-container {
+
+  font-size: 18px;
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 25px;
+  width: 75%;
+min-height: 60%;
+  margin :3% auto 15% auto;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+.b-text{
+background-color:white;
+width: 90%;
+display:flex;
+justify-content:center;
+ border-radius: 40px;
+}
+/* Question Box */
+.ques {
+  display: flex;
+  padding: 10px;
+  width: 100%;
+  height: 20%;
+  gap: 30px;
+  align-items: center;
+}
+
+
+.ans {
+  margin: auto;
+  padding: 15px;
+  width: 100%;
+  line-height: 2;
+  color: #444;
+}
+
+
+.profileimg {
+  font-size: 32px;
+  color: #333;
+}
+.sendicon{
+margin:0px auto 1.9px auto;
+padding:0px;
+} 
+.typing-box {
+  width: 100%;
+  font-family: monospace;
+  white-space: pre-wrap;   
+  word-break: break-word;  
+  transition: height 0.3s ease-out;
+}
+
+/* .typing-text {
+  border-right: 2px solid black;
+  animation: typing 5s steps(100, end) forwards, blink 0.75s step-end infinite;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+@keyframes typing {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%; 
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+} */
+
+/* .typing-box {
+  overflow: hidden;
+  transition: max-height 0.5s ease;
+}
+ .typing-text {
+  white-space: pre-wrap;
+  word-break: break-word;
+} */

@@ -1,0 +1,6 @@
+{
+  "appId": "com.tkrg.gemini",
+  "appName": "gemini-clone",
+  "webDir": "dist",
+  "bundledWebRuntime": false
+}
