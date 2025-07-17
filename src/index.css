@@ -302,6 +302,39 @@
   transition: height 0.3s ease-out;
 }
 
+@media (max-width: 768px) {
+  .sidebar {
+    max-width: 100%;
+    flex-direction: row;
+    overflow-x: auto;
+    height: auto;
+  }
+
+  .main-content {
+    padding: 1rem;
+  }
+
+  .nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+
+  .main-bottum {
+    width: 95%;
+  }
+
+  .input input {
+    font-size: 14px;
+  }
+
+  .greet {
+    font-size: 1.5rem;
+  }
+}
 
 
 /* .typing-text {
